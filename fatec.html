@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="imagens/logo.png" />	
+	<link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	
+	<script src="js/modernizr.custom.46884.js"></script>
+	
+	<title> Fatec Jales </title>
+</head>
+<body>
+	<header>	
+		<img class="logo" alt="Logotipo" src="imagens/logo.png"/>
+			
+		<nav>
+			<ul>
+				<li><a href="index.html">Início</a></li>
+				<li><a href="fatec.html">Fatec</a></li>
+				<li><a href="materias.html">Matérias</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav>			
+	</header>	
+			
+	<article class="artIndex">
+	
+		<h1> Fatec Jales </h1>	
+		
+		<section id="sessaoFatec2">
+	
+			<br><br><br>
+	
+			<p>A Faculdade de Tecnologia de Jales - Prof. José Camargo é uma instituição de ensino superior público que 
+				pertence ao Centro Estadual de Educação Tecnológica Paula Souza (CEETEPS).</p>
+	
+			<p>A Fatec de Jales possui 2 processos seletivos por ano, havendo 40 vagas para os quatro cursos disponíveis, sendo 
+				o Agronegócio, Gestão Empresarial e Sistemas para Internet à noite e Análise e Desenvolvimento de Sistemas de manhã, cada curso dura 3 anos.</p>
+			<p>A Fatecjales foi colocada entre as melhores do país segundo o MEC.</p>
+	
+			<br><br><br>
+	
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<img src="imagens/fatec.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>Entrada</h3>
+						</div>
+					</li>
+					<li>
+						<img src="imagens/fatecjales3.jpg" alt="image2"/>
+						<div class="sb-description">
+							<h3>Salas</h3>
+						</div>
+					</li>
+					<li>
+						<img src="imagens/fatecjales4.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>Estacionamento</h3>
+						</div>
+					</li>
+					<li>
+						<img src="imagens/fatecjales5.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>Laboratório</h3>
+						</div>
+					</li>
+					<li>
+						<img src="imagens/fatecjales6.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>Ambiente Exterior</h3>
+						</div>
+					</li>
+					<li>
+						<img src="imagens/fatecjales7.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>Bancos</h3>
+						</div>
+					</li>
+					<li>
+						<img src="imagens/fatec.png" alt="image1"/>
+						<div class="sb-description">
+							<h3>Logo</h3>
+						</div>
+					</li>
+				</ul>
+				
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+				<script src="js/jquery.slicebox.js"></script>
+				<script>
+				$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+							})();
+
+						Page.init();
+
+					});
+				</script>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+			</div><!-- /wrapper -->
+		
+			<iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14970.349386163023!2d-50.5413142!3d-20.2759418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b69addbada7ff85!2sFaculdade+de+Tecnologia+de+Jales+-+Prof.+Jos%C3%A9+Camargo!5e0!3m2!1spt-BR!2sbr!4v1528851805646" allowfullscreen></iframe>
+	
+			<p class="site">Site da Fatec: <a class="site" href="http://www.fatecjales.edu.br/" target="_blank">www.fatecjales.edu.br/</a></p>
+		
+	
+	</section>	
+	
+	</article>
+	
+	<footer>
+	
+		<p>Matheus Francisco Caldeira &copy; 2018| Todos os direitos Reservados</p>
+	</footer>	
+</body>
+</html>
